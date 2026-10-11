@@ -16,7 +16,8 @@ const columnas = "abcdefgh";
 /* Comentario MARCO: Declarar variables fuera de los for es muy estilo Java,
 en js se suele declarar con `let` dentro del propio for.
 Sobre todo para que la variable se destruya al salir del for y no consuma memoria*/
-//Comentario JULIA:
+/* Comentario JULIA: Tienes toda la razón. Al venir de Java tendía a declarar todo arriba por costumbre, pero para la próxima versión moveré las
+ declaraciones directamente dentro de la cabecera de los bucles con `let` para delimitar su alcance (scope) y optimizar el uso de memoria.*/
 
 // Variables declaradas fuera de los bucles
 let fila;
@@ -48,7 +49,8 @@ console.log(`\n`)
 /* Comentario MARCO : El código funciona y no da error porque js es muy permisivo, ese es el problema,
  al hacer 'col % 2' (letra / número), js internamente devuelve el valor 'NaN' (Not a Number).
  'NaN === 0' es falso, siempre te dira que es "negra", entrando en el else*/
-//Comentario JULIA
+//Comentario JULIA: // Comentario JULIA: No me había dado cuenta de la conversión a NaN al operar con el string.
+// Para solucionarlo, sustituiré la letra por su índice numérico para poder hacer el cálculo matemático correctamente con números.
 
 fila = 4;
 let col = 'h';
@@ -91,7 +93,8 @@ let jugada;
 
 /*Comentario MARCO: usar 'continue' para saltar los comentarios y 'break'
  para detenerse por completo tras detectar el jaque mate es perfecto */
-//Comentario JULIA
+// Comentario JULIA: Me pareció la forma más limpia y directa de filtrar los elementos del array y cortar la ejecución justo
+// cuando acaba la partida sin seguir iterando innecesariamente.
 
 for (jugada of partida) {
 
