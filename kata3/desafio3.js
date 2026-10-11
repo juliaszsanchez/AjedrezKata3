@@ -15,8 +15,8 @@ const columnas = "abcdefgh";
 
 /* Comentario MARCO: Declarar variables fuera de los for es muy estilo Java,
 en js se suele declarar con `let` dentro del propio for.
-Sobre todo para que la variable se destruya al salir del for y no consuma memoria*/
-/* Comentario JULIA: Tienes toda la razón. Al venir de Java tendía a declarar todo arriba por costumbre, pero para la próxima versión moveré las
+Especialmente para que la variable se destruya al salir del for y no consuma memoria*/
+/* Comentario JULIA: Tienes toda la razón. Al venir de Java tendía a declarar arriba por costumbre, pero para la próxima versión moveré las
  declaraciones directamente dentro de la cabecera de los bucles con `let` para delimitar su alcance (scope) y optimizar el uso de memoria.*/
 
 // Variables declaradas fuera de los bucles
